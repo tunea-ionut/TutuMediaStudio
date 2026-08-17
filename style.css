@@ -1124,6 +1124,164 @@ footer {
         gap: 18px;
         text-align: center;
     }
+/* =========================
+   CONTACT FORM
+========================= */
 
+.contact-heading {
+    max-width: 800px;
+    margin-bottom: 55px;
+}
+
+.contact-heading h2 {
+    margin-bottom: 25px;
+}
+
+.contact-heading > p:last-child {
+    max-width: 600px;
+    font-size: 18px;
+}
+
+
+.contact-form {
+    width: min(100%, 850px);
+    margin: 0 auto;
+    padding: 45px;
+    background: rgba(17, 17, 17, 0.85);
+    border: 1px solid var(--border);
+    position: relative;
+}
+
+
+.contact-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: var(--accent);
+}
+
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 25px;
+}
+
+
+.form-group label {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: #080808;
+    color: #fff;
+    border: 1px solid #292929;
+    padding: 17px 18px;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 160px;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #555;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent);
+    background: #0b0b0b;
+    box-shadow: 0 0 0 3px rgba(255, 212, 0, 0.08);
+}
+
+
+.form-submit {
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    width: 100%;
+    justify-content: center;
+    font-size: 15px;
+}
+
+
+.form-submit:hover {
+    transform: translateY(-3px);
+}
+
+
+.contact-socials {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 45px;
+}
+
+
+.contact-socials a {
+    color: #aaa;
+    font-size: 14px;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.contact-socials a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .contact-form {
+        padding: 28px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-socials {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+}
 }
 ```
