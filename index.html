@@ -662,61 +662,169 @@
 
 
         <!-- CTA -->
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
 
-        <section id="contact" class="contact-section">
+    <div class="contact-grid"></div>
 
-            <div class="contact-grid"></div>
+    <div class="container contact-container">
 
-            <div class="container contact-container reveal">
+        <div class="contact-heading reveal">
 
-                <p class="eyebrow">
-                    AI UN PROIECT?
-                </p>
+            <p class="eyebrow">
+                AI UN PROIECT?
+            </p>
 
-                <h2>
-                    Hai să-l facem
-                    <span>real.</span>
-                </h2>
+            <h2>
+                Hai să-l facem
+                <span>real.</span>
+            </h2>
 
-                <p>
-                    Povestește-mi despre proiectul tău și vedem
-                    ce putem crea împreună.
-                </p>
+            <p>
+                Povestește-mi despre proiectul tău și
+                te contactez cât mai repede.
+            </p>
 
-                <a
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=tutumediastudio@gmail.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="button primary big-button"
->
-    Contactează-mă
-    <span>↗</span>
-</a>
-                </a>
+        </div>
 
-                <div class="contact-socials">
 
-                    <a href="https://instagram.com/_tunea.ionut_/" target="_blank">
-                        Instagram ↗
-                    </a>
+        <form
+            class="contact-form reveal"
+            action="https://formsubmit.co/tutumediastudio@gmail.com"
+            method="POST"
+        >
 
-                    <a href="https://tiktok.com/@tunea.ionut1" target="_blank">
-                        TikTok ↗
-                    </a>
+            <input
+                type="hidden"
+                name="_subject"
+                value="Proiect nou - TutuMediaStudio"
+            >
 
-                    <a href="https://youtube.com/@TuneaIonut1" target="_blank">
-                        YouTube ↗
-                    </a>
+            <input
+                type="hidden"
+                name="_template"
+                value="table"
+            >
+
+            <input
+                type="hidden"
+                name="_captcha"
+                value="true"
+            >
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Nume
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Numele tău"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="email@exemplu.ro"
+                        required
+                    >
 
                 </div>
 
             </div>
 
-        </section>
 
-    </main>
+            <div class="form-group">
+
+                <label for="phone">
+                    Telefon
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="07xx xxx xxx"
+                >
+
+            </div>
 
 
+            <div class="form-group">
+
+                <label for="message">
+                    Descriere proiect
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Spune-mi câteva detalii despre proiectul tău..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="button primary form-submit"
+            >
+                Trimite proiectul
+                <span>↗</span>
+            </button>
+
+        </form>
+
+
+        <div class="contact-socials reveal">
+
+            <a
+                href="https://www.instagram.com/_tunea.ionut_/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram ↗
+            </a>
+
+            <a
+                href="https://www.tiktok.com/@tunea.ionut1"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                TikTok ↗
+            </a>
+
+            <a
+                href="mailto:tutumediastudio@gmail.com"
+            >
+                Email ↗
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+      
     <!-- PROJECT MODAL -->
 
     <div class="modal" id="projectModal">
