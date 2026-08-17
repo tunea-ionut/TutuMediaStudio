@@ -1447,5 +1447,47 @@ footer {
         gap: 10px;
         margin-top: 80px;
     }
+/* CONTACT - DARKER TEXT */
 
+.contact-intro p {
+    color: #666 !important;
+}
+
+.cinematic-field label {
+    color: #555 !important;
+}
+
+.cinematic-field input,
+.cinematic-field textarea {
+    color: #aaa !important;
+}
+
+.cinematic-field input::placeholder,
+.cinematic-field textarea::placeholder {
+    color: #3d3d3d !important;
+}
+
+.contact-info-block span {
+    color: #4d4d4d !important;
+}
+
+.contact-info-block a {
+    color: #777 !important;
+}
+
+.contact-location p {
+    color: #666 !important;
+}
+
+.contact-footer {
+    color: #3d3d3d !important;
+}
+
+.cinematic-submit {
+    color: #777 !important;
+}
+
+.cinematic-submit:hover {
+    color: #FFD400 !important;
+}
 }
