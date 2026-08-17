@@ -1,19 +1,28 @@
+```html
 <!DOCTYPE html>
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ionuț Tunea — Video Editor</title>
-    <meta name="description" content="Ionuț Tunea — Video Editor & Content Creator. Portofoliu, proiecte și date de contact.">
+    <title>Ionuț Tunea — Videograf</title>
+
+    <meta
+        name="description"
+        content="Ionuț Tunea — Videograf și Content Creator. Descoperă portofoliul, serviciile și proiectele mele."
+    >
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- CURSOR GLOW -->
+    <div class="cursor-glow"></div>
+
     <!-- NAVBAR -->
     <header class="navbar">
+
         <div class="container nav-container">
 
             <a href="#home" class="logo">
@@ -21,105 +30,185 @@
             </a>
 
             <nav id="nav-menu">
-                <a href="#home">Acasă</a>
-                <a href="#portfolio">Portofoliu</a>
-                <a href="#about">Despre mine</a>
-                <a href="#contact">Contact</a>
+
+                <a href="#home" class="nav-link active">
+                    Acasă
+                </a>
+
+                <a href="#portfolio" class="nav-link">
+                    Portofoliu
+                </a>
+
+                <a href="#about" class="nav-link">
+                    Despre mine
+                </a>
+
+                <a href="#services" class="nav-link">
+                    Servicii
+                </a>
+
+                <a href="#contact" class="nav-link">
+                    Contact
+                </a>
+
             </nav>
 
-            <button class="menu-button" id="menuButton" aria-label="Deschide meniul">
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Deschide meniul"
+            >
                 ☰
             </button>
 
         </div>
+
     </header>
 
 
-    <!-- HERO -->
     <main>
 
+        <!-- HERO -->
         <section id="home" class="hero">
+
+            <div class="hero-grid"></div>
 
             <div class="container hero-container">
 
-                <div class="hero-content">
+                <div class="hero-content reveal">
 
-                    <p class="eyebrow">VIDEO EDITOR & CONTENT CREATOR</p>
+                    <div class="availability">
+                        <span></span>
+                        Disponibil pentru proiecte
+                    </div>
+
+                    <p class="eyebrow">
+                        VIDEOGRAF & CONTENT CREATOR
+                    </p>
 
                     <h1>
-                        Transform ideile în
-                        <span>conținut.</span>
+                        Spun povești
+                        <span>prin video.</span>
                     </h1>
 
                     <p class="hero-description">
-                        Sunt Ionuț Tunea, video editor și content creator.
-                        Editez videoclipuri pentru YouTube, TikTok, Instagram,
-                        podcasturi și proiecte de entertainment.
+                        Sunt Ionuț Tunea, videograf și content creator.
+                        Creez conținut video dinamic pentru branduri,
+                        creatori și proiecte care merită să fie văzute.
                     </p>
 
                     <div class="hero-buttons">
+
                         <a href="#portfolio" class="button primary">
                             Vezi portofoliul
+                            <span>↗</span>
                         </a>
 
                         <a href="#contact" class="button secondary">
-                            Contactează-mă
+                            Hai să vorbim
                         </a>
+
                     </div>
 
-                    <div class="social-links hero-socials">
-                        <a href="https://youtube.com/" target="_blank">YouTube</a>
-                        <a href="https://instagram.com/" target="_blank">Instagram</a>
-                        <a href="https://tiktok.com/" target="_blank">TikTok</a>
+                    <div class="hero-socials">
+
+                        <a href="https://youtube.com/" target="_blank">
+                            YouTube
+                        </a>
+
+                        <a href="https://instagram.com/" target="_blank">
+                            Instagram
+                        </a>
+
+                        <a href="https://tiktok.com/" target="_blank">
+                            TikTok
+                        </a>
+
                     </div>
 
                 </div>
 
-                <div class="hero-visual">
 
-                    <div class="visual-card">
-                        <div class="visual-top">
+                <!-- HERO VISUAL -->
+
+                <div class="hero-visual reveal">
+
+                    <div class="camera-frame">
+
+                        <div class="camera-top">
                             <span></span>
                             <span></span>
                             <span></span>
+
+                            <p>REC</p>
                         </div>
 
-                        <div class="visual-content">
-                            <div class="play-button">▶</div>
-                            <p>VIDEO EDITING</p>
+                        <div class="camera-screen">
+
+                            <div class="screen-content">
+
+                                <div class="crosshair">
+                                    +
+                                </div>
+
+                                <div class="camera-title">
+                                    <small>THROUGH MY LENS</small>
+                                    <strong>TUNEA.</strong>
+                                </div>
+
+                            </div>
+
+                            <div class="camera-info">
+                                <span>4K</span>
+                                <span>25 FPS</span>
+                                <span>● REC</span>
+                            </div>
+
                         </div>
+
+                    </div>
+
+                    <div class="floating-badge">
+                        <strong>01</strong>
+                        <span>Videografie</span>
                     </div>
 
                 </div>
 
             </div>
 
+            <div class="scroll-indicator">
+                <span></span>
+                Scroll pentru a explora
+            </div>
+
         </section>
 
 
         <!-- STATS -->
+
         <section class="stats">
 
             <div class="container stats-grid">
 
-                <div class="stat">
-                    <strong>1+</strong>
-                    <span>An experiență</span>
+                <div class="stat reveal">
+                    <strong data-count="2">0</strong>
+                    <span>M+ vizualizări</span>
                 </div>
 
-                <div class="stat">
-                    <strong>2M+</strong>
-                    <span>Vizualizări</span>
+                <div class="stat reveal">
+                    <strong data-count="50">0</strong>
+                    <span>proiecte</span>
                 </div>
 
-                <div class="stat">
-                    <strong>50+</strong>
-                    <span>Proiecte</span>
+                <div class="stat reveal">
+                    <strong data-count="1">0</strong>
+                    <span>+ ani experiență</span>
                 </div>
 
-                <div class="stat">
-                    <strong>24/7</strong>
-                    <span>Pasiune pentru edit</span>
+                <div class="stat reveal">
+                    <strong>∞</strong>
+                    <span>idei creative</span>
                 </div>
 
             </div>
@@ -128,62 +217,112 @@
 
 
         <!-- PORTFOLIO -->
+
         <section id="portfolio" class="section">
 
             <div class="container">
 
-                <div class="section-heading">
+                <div class="section-heading reveal">
 
                     <div>
-                        <p class="eyebrow">PROIECTELE MELE</p>
+
+                        <p class="eyebrow">
+                            SELECTED WORK
+                        </p>
 
                         <h2>
                             Portofoliu<span>.</span>
                         </h2>
+
                     </div>
 
                     <p class="section-description">
-                        O selecție de proiecte pe care le-am editat,
-                        de la short-form content până la videoclipuri lungi.
+                        Câteva dintre proiectele mele preferate.
+                        Apasă pe un proiect pentru mai multe detalii.
                     </p>
 
                 </div>
 
 
+                <!-- FILTERS -->
+
+                <div class="filters reveal">
+
+                    <button class="filter active" data-filter="all">
+                        Toate
+                    </button>
+
+                    <button class="filter" data-filter="social">
+                        Social Media
+                    </button>
+
+                    <button class="filter" data-filter="events">
+                        Evenimente
+                    </button>
+
+                    <button class="filter" data-filter="commercial">
+                        Commercial
+                    </button>
+
+                    <button class="filter" data-filter="podcast">
+                        Podcast
+                    </button>
+
+                </div>
+
+
+                <!-- PROJECTS -->
+
                 <div class="portfolio-grid">
 
+
                     <!-- PROJECT 1 -->
-                    <article class="project-card">
+
+                    <article
+                        class="project-card reveal"
+                        data-category="social"
+                        data-title="Social Media Campaign"
+                        data-description="Producție video pentru social media, cu cadre dinamice și storytelling vizual."
+                    >
 
                         <div class="project-image">
+
                             <img
                                 src="assets/project-1.jpg"
-                                alt="Proiect video 1"
+                                alt="Social Media Campaign"
                             >
 
-                            <a
-                                href="https://youtube.com/"
-                                target="_blank"
-                                class="project-play"
-                            >
-                                ▶
-                            </a>
+                            <div class="project-overlay">
+
+                                <span class="view-project">
+                                    Vezi proiectul ↗
+                                </span>
+
+                            </div>
+
+                            <div class="project-number">
+                                01
+                            </div>
+
                         </div>
 
                         <div class="project-info">
 
                             <div>
-                                <p class="project-category">SHORT FORM</p>
+
+                                <p class="project-category">
+                                    SOCIAL MEDIA
+                                </p>
 
                                 <h3>
-                                    TikTok / Reels Edit
+                                    Social Media Campaign
                                 </h3>
+
                             </div>
 
-                            <p>
-                                Editare dinamică, subtitrări,
-                                sound design și efecte vizuale.
-                            </p>
+                            <span class="arrow">
+                                ↗
+                            </span>
 
                         </div>
 
@@ -191,37 +330,52 @@
 
 
                     <!-- PROJECT 2 -->
-                    <article class="project-card">
+
+                    <article
+                        class="project-card reveal"
+                        data-category="events"
+                        data-title="Event Aftermovie"
+                        data-description="Filmare și producție video pentru un eveniment, cu accent pe energie, atmosferă și momentele importante."
+                    >
 
                         <div class="project-image">
+
                             <img
                                 src="assets/project-2.jpg"
-                                alt="Proiect video 2"
+                                alt="Event Aftermovie"
                             >
 
-                            <a
-                                href="https://youtube.com/"
-                                target="_blank"
-                                class="project-play"
-                            >
-                                ▶
-                            </a>
+                            <div class="project-overlay">
+
+                                <span class="view-project">
+                                    Vezi proiectul ↗
+                                </span>
+
+                            </div>
+
+                            <div class="project-number">
+                                02
+                            </div>
+
                         </div>
 
                         <div class="project-info">
 
                             <div>
-                                <p class="project-category">YOUTUBE</p>
+
+                                <p class="project-category">
+                                    EVENIMENTE
+                                </p>
 
                                 <h3>
-                                    YouTube Video
+                                    Event Aftermovie
                                 </h3>
+
                             </div>
 
-                            <p>
-                                Montaj complet, pacing,
-                                sound design și storytelling.
-                            </p>
+                            <span class="arrow">
+                                ↗
+                            </span>
 
                         </div>
 
@@ -229,37 +383,52 @@
 
 
                     <!-- PROJECT 3 -->
-                    <article class="project-card">
+
+                    <article
+                        class="project-card reveal"
+                        data-category="commercial"
+                        data-title="Commercial Project"
+                        data-description="Conținut video comercial creat pentru promovarea unui produs sau serviciu."
+                    >
 
                         <div class="project-image">
+
                             <img
                                 src="assets/project-3.jpg"
-                                alt="Proiect video 3"
+                                alt="Commercial Project"
                             >
 
-                            <a
-                                href="https://youtube.com/"
-                                target="_blank"
-                                class="project-play"
-                            >
-                                ▶
-                            </a>
+                            <div class="project-overlay">
+
+                                <span class="view-project">
+                                    Vezi proiectul ↗
+                                </span>
+
+                            </div>
+
+                            <div class="project-number">
+                                03
+                            </div>
+
                         </div>
 
                         <div class="project-info">
 
                             <div>
-                                <p class="project-category">PODCAST</p>
+
+                                <p class="project-category">
+                                    COMMERCIAL
+                                </p>
 
                                 <h3>
-                                    Podcast Edit
+                                    Commercial Project
                                 </h3>
+
                             </div>
 
-                            <p>
-                                Editare podcast, multicam,
-                                sound design și short-uri.
-                            </p>
+                            <span class="arrow">
+                                ↗
+                            </span>
 
                         </div>
 
@@ -267,26 +436,44 @@
 
 
                     <!-- PROJECT 4 -->
-                    <article class="project-card">
+
+                    <article
+                        class="project-card reveal"
+                        data-category="podcast"
+                        data-title="Podcast Production"
+                        data-description="Producție video pentru podcast, cu mai multe camere și cadre pregătite pentru social media."
+                    >
 
                         <div class="project-image project-placeholder">
-                            <span>+</span>
+
+                            <div class="placeholder-content">
+                                <span>+</span>
+                                <small>YOUR PROJECT</small>
+                            </div>
+
+                            <div class="project-number">
+                                04
+                            </div>
+
                         </div>
 
                         <div class="project-info">
 
                             <div>
-                                <p class="project-category">PROIECT NOU</p>
+
+                                <p class="project-category">
+                                    PODCAST
+                                </p>
 
                                 <h3>
-                                    Următorul tău proiect
+                                    Podcast Production
                                 </h3>
+
                             </div>
 
-                            <p>
-                                Poate fi următorul proiect
-                                prezentat aici.
-                            </p>
+                            <span class="arrow">
+                                ↗
+                            </span>
 
                         </div>
 
@@ -300,62 +487,63 @@
 
 
         <!-- ABOUT -->
+
         <section id="about" class="section about-section">
 
             <div class="container about-grid">
 
-                <div class="about-image">
+                <div class="about-visual reveal">
 
-                    <div class="about-image-inner">
-                        <span>T</span>
+                    <div class="about-card">
+
+                        <div class="about-card-number">
+                            01
+                        </div>
+
+                        <div class="about-letter">
+                            T
+                        </div>
+
+                        <div class="about-card-footer">
+                            <span>IONUȚ TUNEA</span>
+                            <span>VIDEOGRAPHY</span>
+                        </div>
+
                     </div>
 
                 </div>
 
 
-                <div class="about-content">
+                <div class="about-content reveal">
 
-                    <p class="eyebrow">DESPRE MINE</p>
+                    <p class="eyebrow">
+                        DESPRE MINE
+                    </p>
 
                     <h2>
-                        Salut, sunt
-                        <span>Ionuț.</span>
+                        Camera mea,
+                        <span>povestea ta.</span>
                     </h2>
 
                     <p>
-                        Sunt video editor și content creator, pasionat
-                        de storytelling, content online și tot ce ține
-                        de lumea video.
+                        Sunt Ionuț Tunea, videograf și content creator.
+                        Îmi place să surprind momente, oameni și idei
+                        prin imagini care transmit ceva.
                     </p>
 
                     <p>
-                        Îmi place să transform materialul brut într-un
-                        videoclip care captează atenția și transmite
-                        mesajul potrivit.
+                        Fie că este vorba despre un eveniment,
+                        content pentru social media, un proiect comercial
+                        sau un podcast, obiectivul meu este să creez
+                        imagini care atrag atenția și rămân în memorie.
                     </p>
 
-                    <div class="skills">
+                    <div class="about-tags">
 
-                        <div class="skill">
-                            <span>Video Editing</span>
-                            <div class="skill-bar">
-                                <div style="width: 95%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <span>Short Form Content</span>
-                            <div class="skill-bar">
-                                <div style="width: 90%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <span>Storytelling</span>
-                            <div class="skill-bar">
-                                <div style="width: 85%;"></div>
-                            </div>
-                        </div>
+                        <span>VIDEOGRAFIE</span>
+                        <span>CONTENT</span>
+                        <span>STORYTELLING</span>
+                        <span>CREATIVE</span>
 
                     </div>
 
@@ -367,13 +555,16 @@
 
 
         <!-- SERVICES -->
-        <section class="section services-section">
+
+        <section id="services" class="section">
 
             <div class="container">
 
-                <div class="section-heading centered">
+                <div class="section-heading centered reveal">
 
-                    <p class="eyebrow">CE POT FACE</p>
+                    <p class="eyebrow">
+                        CE FAC
+                    </p>
 
                     <h2>
                         Servicii<span>.</span>
@@ -384,44 +575,82 @@
 
                 <div class="services-grid">
 
-                    <div class="service-card">
 
-                        <span class="service-number">01</span>
+                    <div class="service-card reveal">
 
-                        <h3>Video Editing</h3>
+                        <span class="service-number">
+                            01
+                        </span>
+
+                        <div class="service-icon">
+                            ◉
+                        </div>
+
+                        <h3>
+                            Videografie
+                        </h3>
 
                         <p>
-                            Editare video completă pentru YouTube,
-                            reclame, entertainment și content online.
+                            Filmări video pentru proiecte personale,
+                            branduri, creatori și evenimente.
                         </p>
+
+                        <span class="service-arrow">
+                            ↗
+                        </span>
 
                     </div>
 
 
-                    <div class="service-card">
+                    <div class="service-card reveal">
 
-                        <span class="service-number">02</span>
+                        <span class="service-number">
+                            02
+                        </span>
 
-                        <h3>Short Form</h3>
+                        <div class="service-icon">
+                            ◌
+                        </div>
+
+                        <h3>
+                            Social Media
+                        </h3>
 
                         <p>
-                            TikTok, Reels și YouTube Shorts create
-                            pentru retenție și engagement.
+                            Conținut video vertical și cinematic
+                            pentru Instagram, TikTok și YouTube.
                         </p>
+
+                        <span class="service-arrow">
+                            ↗
+                        </span>
 
                     </div>
 
 
-                    <div class="service-card">
+                    <div class="service-card reveal">
 
-                        <span class="service-number">03</span>
+                        <span class="service-number">
+                            03
+                        </span>
 
-                        <h3>Podcast Editing</h3>
+                        <div class="service-icon">
+                            ◎
+                        </div>
+
+                        <h3>
+                            Producție
+                        </h3>
 
                         <p>
-                            Editare multicam, sound design,
-                            subtitrări și extragere de short-uri.
+                            Concept, filmare și producție pentru
+                            proiecte video care au nevoie de o imagine
+                            profesionistă.
                         </p>
+
+                        <span class="service-arrow">
+                            ↗
+                        </span>
 
                     </div>
 
@@ -432,52 +661,48 @@
         </section>
 
 
-        <!-- CONTACT -->
-        <section id="contact" class="section contact-section">
+        <!-- CTA -->
 
-            <div class="container contact-container">
+        <section id="contact" class="contact-section">
 
-                <p class="eyebrow">AI UN PROIECT?</p>
+            <div class="contact-grid"></div>
+
+            <div class="container contact-container reveal">
+
+                <p class="eyebrow">
+                    AI UN PROIECT?
+                </p>
 
                 <h2>
-                    Hai să facem ceva
-                    <span>mișto.</span>
+                    Hai să-l facem
+                    <span>real.</span>
                 </h2>
 
                 <p>
-                    Dacă ai un proiect video sau vrei să discutăm
-                    despre o colaborare, trimite-mi un mesaj.
+                    Povestește-mi despre proiectul tău și vedem
+                    ce putem crea împreună.
                 </p>
 
                 <a
                     href="mailto:emailul-tau@gmail.com"
                     class="button primary big-button"
                 >
-                    Trimite-mi un email
+                    Contactează-mă
+                    <span>↗</span>
                 </a>
-
 
                 <div class="contact-socials">
 
-                    <a
-                        href="https://instagram.com/"
-                        target="_blank"
-                    >
-                        Instagram
+                    <a href="https://instagram.com/" target="_blank">
+                        Instagram ↗
                     </a>
 
-                    <a
-                        href="https://tiktok.com/"
-                        target="_blank"
-                    >
-                        TikTok
+                    <a href="https://tiktok.com/" target="_blank">
+                        TikTok ↗
                     </a>
 
-                    <a
-                        href="https://youtube.com/"
-                        target="_blank"
-                    >
-                        YouTube
+                    <a href="https://youtube.com/" target="_blank">
+                        YouTube ↗
                     </a>
 
                 </div>
@@ -489,7 +714,49 @@
     </main>
 
 
+    <!-- PROJECT MODAL -->
+
+    <div class="modal" id="projectModal">
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                aria-label="Închide"
+            >
+                ×
+            </button>
+
+            <p class="eyebrow">
+                PROIECT
+            </p>
+
+            <h2 id="modalTitle">
+                Project
+            </h2>
+
+            <p id="modalDescription">
+                Descriere proiect.
+            </p>
+
+            <a
+                href="#"
+                class="button primary"
+                id="modalLink"
+            >
+                Vezi proiectul ↗
+            </a>
+
+        </div>
+
+    </div>
+
+
     <!-- FOOTER -->
+
     <footer>
 
         <div class="container footer-container">
@@ -499,7 +766,7 @@
             </a>
 
             <p>
-                © <span id="year"></span> Ionuț Tunea. Toate drepturile rezervate.
+                © <span id="year"></span> Ionuț Tunea.
             </p>
 
             <a href="#home" class="back-top">
@@ -515,3 +782,4 @@
 
 </body>
 </html>
+```
