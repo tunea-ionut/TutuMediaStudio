@@ -1489,5 +1489,136 @@ footer {
 
 .cinematic-submit:hover {
     color: #FFD400 !important;
+}/* DESKTOP CONTACT FIX */
+
+@media (min-width: 801px) {
+
+    .contact-section {
+        padding: 140px 0 60px !important;
+        color: #aaa;
+    }
+
+    .contact-top {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-end !important;
+        margin-bottom: 90px !important;
+    }
+
+    .contact-title {
+        color: #eee !important;
+        font-size: clamp(70px, 9vw, 140px) !important;
+        line-height: .85 !important;
+    }
+
+    .contact-title span {
+        color: #FFD400 !important;
+    }
+
+    .contact-intro {
+        color: #666 !important;
+    }
+
+    .contact-intro p {
+        color: #666 !important;
+    }
+
+    .contact-layout {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 280px !important;
+        gap: 100px !important;
+    }
+
+    .form-line-row {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 60px !important;
+    }
+
+    .cinematic-field {
+        display: block !important;
+        margin-bottom: 50px !important;
+    }
+
+    .cinematic-field label {
+        display: block !important;
+        color: #555 !important;
+        font-size: 10px !important;
+        letter-spacing: 2px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .cinematic-field input,
+    .cinematic-field textarea {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+
+        background: transparent !important;
+        border: 0 !important;
+        border-bottom: 1px solid #303030 !important;
+        border-radius: 0 !important;
+
+        padding: 14px 0 18px !important;
+
+        color: #aaa !important;
+        font-size: 19px !important;
+        font-family: inherit !important;
+
+        outline: none !important;
+    }
+
+    .cinematic-field input::placeholder,
+    .cinematic-field textarea::placeholder {
+        color: #404040 !important;
+    }
+
+    .cinematic-field input:focus,
+    .cinematic-field textarea:focus {
+        border-bottom-color: #FFD400 !important;
+    }
+
+    .cinematic-submit {
+        display: flex !important;
+        width: 100% !important;
+
+        background: transparent !important;
+        border: 1px solid #303030 !important;
+
+        padding: 24px !important;
+
+        color: #777 !important;
+        font-family: inherit !important;
+        font-weight: 800 !important;
+
+        cursor: pointer !important;
+    }
+
+    .cinematic-submit:hover {
+        color: #FFD400 !important;
+        border-color: #FFD400 !important;
+    }
+
+    .contact-info {
+        display: block !important;
+        border-left: 1px solid #252525 !important;
+        padding-left: 35px !important;
+    }
+
+    .contact-info-block span {
+        color: #4d4d4d !important;
+    }
+
+    .contact-info-block a {
+        color: #777 !important;
+    }
+
+    .contact-location p {
+        color: #666 !important;
+    }
+
+    .contact-footer {
+        color: #3d3d3d !important;
+    }
 }
 }
