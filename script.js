@@ -1,436 +1,278 @@
-```javascript
-/* =========================
-   MOBILE MENU
-========================= */
+// MOBILE MENU
 
 const menuButton = document.getElementById("menuButton");
 const navMenu = document.getElementById("nav-menu");
 
 if (menuButton && navMenu) {
-
-    menuButton.addEventListener("click", () => {
-
+    menuButton.addEventListener("click", function () {
         navMenu.classList.toggle("active");
 
-        menuButton.textContent =
-            navMenu.classList.contains("active")
-                ? "×"
-                : "☰";
-
-    });
-
-    navMenu.querySelectorAll("a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            navMenu.classList.remove("active");
-
+        if (navMenu.classList.contains("active")) {
+            menuButton.textContent = "×";
+        } else {
             menuButton.textContent = "☰";
-
-        });
-
+        }
     });
 
+    const navItems = navMenu.querySelectorAll("a");
+
+    navItems.forEach(function (link) {
+        link.addEventListener("click", function () {
+            navMenu.classList.remove("active");
+            menuButton.textContent = "☰";
+        });
+    });
 }
 
 
-/* =========================
-   CURRENT YEAR
-========================= */
+// CURRENT YEAR
 
-const year = document.getElementById("year");
+const yearElement = document.getElementById("year");
 
-if (year) {
-    year.textContent = new Date().getFullYear();
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
 }
 
 
-/* =========================
-   CURSOR GLOW
-========================= */
+// CURSOR GLOW
 
 const cursorGlow = document.querySelector(".cursor-glow");
 
 if (cursorGlow) {
-
-    document.addEventListener("mousemove", (event) => {
-
-        cursorGlow.style.left = `${event.clientX}px`;
-        cursorGlow.style.top = `${event.clientY}px`;
-
+    document.addEventListener("mousemove", function (event) {
+        cursorGlow.style.left = event.clientX + "px";
+        cursorGlow.style.top = event.clientY + "px";
     });
-
 }
 
 
-/* =========================
-   SCROLL REVEAL
-========================= */
+// SCROLL REVEAL
 
-const revealElements =
-    document.querySelectorAll(".reveal");
+const revealElements = document.querySelectorAll(".reveal");
 
-const revealObserver =
-    new IntersectionObserver(
-        (entries) => {
+const revealObserver = new IntersectionObserver(
+    function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    },
+    {
+        threshold: 0.1
+    }
+);
 
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("visible");
-
-                    revealObserver.unobserve(
-                        entry.target
-                    );
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.12
-        }
-    );
-
-
-revealElements.forEach(element => {
-
+revealElements.forEach(function (element) {
     revealObserver.observe(element);
-
 });
 
 
-/* =========================
-   COUNTERS
-========================= */
+// COUNTERS
 
-const counters =
-    document.querySelectorAll("[data-count]");
-
+const counters = document.querySelectorAll("[data-count]");
 let countersStarted = false;
 
 function animateCounters() {
 
-    if (countersStarted) return;
+    if (countersStarted) {
+        return;
+    }
 
     countersStarted = true;
 
-    counters.forEach(counter => {
+    counters.forEach(function (counter) {
 
-        const target =
-            Number(counter.dataset.count);
-
-        let current = 0;
-
-        const duration = 1300;
-
+        const target = Number(counter.getAttribute("data-count"));
+        const duration = 1200;
         const startTime = performance.now();
 
-        function update(time) {
+        function updateCounter(currentTime) {
 
-            const progress =
-                Math.min(
-                    (time - startTime) / duration,
-                    1
-                );
+            const progress = Math.min(
+                (currentTime - startTime) / duration,
+                1
+            );
 
-            const eased =
+            const easedProgress =
                 1 - Math.pow(1 - progress, 3);
 
-            current =
-                Math.floor(target * eased);
+            const currentValue =
+                Math.floor(target * easedProgress);
 
-            counter.textContent = current;
+            counter.textContent = currentValue;
 
             if (progress < 1) {
-
-                requestAnimationFrame(update);
-
+                requestAnimationFrame(updateCounter);
             } else {
-
                 counter.textContent = target;
-
             }
-
         }
 
-        requestAnimationFrame(update);
-
+        requestAnimationFrame(updateCounter);
     });
-
 }
 
 
-const statsSection =
-    document.querySelector(".stats");
+const statsSection = document.querySelector(".stats");
 
 if (statsSection) {
 
-    const statsObserver =
-        new IntersectionObserver(
-            (entries) => {
+    const statsObserver = new IntersectionObserver(
+        function (entries) {
 
-                if (entries[0].isIntersecting) {
-
-                    animateCounters();
-
-                    statsObserver.disconnect();
-
-                }
-
-            },
-            {
-                threshold: 0.4
+            if (entries[0].isIntersecting) {
+                animateCounters();
+                statsObserver.disconnect();
             }
-        );
+
+        },
+        {
+            threshold: 0.3
+        }
+    );
 
     statsObserver.observe(statsSection);
-
 }
 
 
-/* =========================
-   PORTFOLIO FILTER
-========================= */
+// PORTFOLIO FILTERS
 
-const filters =
-    document.querySelectorAll(".filter");
+const filters = document.querySelectorAll(".filter");
+const projects = document.querySelectorAll(".project-card");
 
-const projects =
-    document.querySelectorAll(".project-card");
+filters.forEach(function (filter) {
 
-filters.forEach(filter => {
+    filter.addEventListener("click", function () {
 
-    filter.addEventListener("click", () => {
-
-        filters.forEach(item => {
+        filters.forEach(function (item) {
             item.classList.remove("active");
         });
 
         filter.classList.add("active");
 
-        const selected =
-            filter.dataset.filter;
+        const selectedCategory =
+            filter.getAttribute("data-filter");
 
-        projects.forEach(project => {
+        projects.forEach(function (project) {
 
-            const category =
-                project.dataset.category;
+            const projectCategory =
+                project.getAttribute("data-category");
 
             if (
-                selected === "all" ||
-                category === selected
+                selectedCategory === "all" ||
+                projectCategory === selectedCategory
             ) {
-
                 project.classList.remove("hidden");
-
-                setTimeout(() => {
-
-                    project.style.opacity = "1";
-                    project.style.transform =
-                        "translateY(0)";
-
-                }, 20);
-
             } else {
-
                 project.classList.add("hidden");
-
             }
-
         });
-
     });
-
 });
 
 
-/* =========================
-   PROJECT MODAL
-========================= */
+// PROJECT MODAL
 
-const modal =
-    document.getElementById("projectModal");
+const modal = document.getElementById("projectModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+const modalClose = document.getElementById("modalClose");
+const modalBackdrop = document.querySelector(".modal-backdrop");
 
-const modalTitle =
-    document.getElementById("modalTitle");
+projects.forEach(function (project) {
 
-const modalDescription =
-    document.getElementById("modalDescription");
-
-const modalClose =
-    document.getElementById("modalClose");
-
-const modalBackdrop =
-    document.querySelector(".modal-backdrop");
-
-const modalLink =
-    document.getElementById("modalLink");
-
-
-projects.forEach(project => {
-
-    project.addEventListener("click", () => {
+    project.addEventListener("click", function () {
 
         const title =
-            project.dataset.title;
+            project.getAttribute("data-title");
 
         const description =
-            project.dataset.description;
+            project.getAttribute("data-description");
 
-        modalTitle.textContent = title;
+        if (modalTitle) {
+            modalTitle.textContent = title;
+        }
 
-        modalDescription.textContent =
-            description;
+        if (modalDescription) {
+            modalDescription.textContent = description;
+        }
 
-        modalLink.href =
-            project.querySelector("img")
-                ?.src || "#";
-
-        modal.classList.add("active");
+        if (modal) {
+            modal.classList.add("active");
+        }
 
         document.body.classList.add("modal-open");
-
     });
-
 });
 
 
 function closeModal() {
 
-    modal.classList.remove("active");
+    if (modal) {
+        modal.classList.remove("active");
+    }
 
     document.body.classList.remove("modal-open");
-
 }
 
 
 if (modalClose) {
-
-    modalClose.addEventListener(
-        "click",
-        closeModal
-    );
-
+    modalClose.addEventListener("click", closeModal);
 }
 
 if (modalBackdrop) {
-
-    modalBackdrop.addEventListener(
-        "click",
-        closeModal
-    );
-
+    modalBackdrop.addEventListener("click", closeModal);
 }
 
 
-document.addEventListener("keydown", event => {
+document.addEventListener("keydown", function (event) {
 
     if (event.key === "Escape") {
-
         closeModal();
-
     }
 
 });
 
 
-/* =========================
-   ACTIVE NAVIGATION
-========================= */
+// ACTIVE NAVIGATION
 
-const sections =
-    document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-link");
 
-const navLinks =
-    document.querySelectorAll(".nav-link");
+const navigationObserver = new IntersectionObserver(
+    function (entries) {
 
-const navObserver =
-    new IntersectionObserver(
-        entries => {
+        entries.forEach(function (entry) {
 
-            entries.forEach(entry => {
+            if (entry.isIntersecting) {
 
-                if (entry.isIntersecting) {
+                const currentSection =
+                    entry.target.getAttribute("id");
 
-                    const current =
-                        entry.target.id;
+                navLinks.forEach(function (link) {
 
-                    navLinks.forEach(link => {
+                    link.classList.remove("active");
 
-                        link.classList.remove(
-                            "active"
-                        );
+                    const linkTarget =
+                        link.getAttribute("href");
 
-                        if (
-                            link.getAttribute("href")
-                            === `#${current}`
-                        ) {
-
-                            link.classList.add(
-                                "active"
-                            );
-
-                        }
-
-                    });
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.35
-        }
-    );
+                    if (
+                        linkTarget === "#" + currentSection
+                    ) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+        });
+    },
+    {
+        threshold: 0.3
+    }
+);
 
 
-sections.forEach(section => {
-
-    navObserver.observe(section);
-
+sections.forEach(function (section) {
+    navigationObserver.observe(section);
 });
-
-
-/* =========================
-   MAGNETIC BUTTON EFFECT
-========================= */
-
-const magneticButtons =
-    document.querySelectorAll(
-        ".button.primary, .logo"
-    );
-
-magneticButtons.forEach(button => {
-
-    button.addEventListener("mousemove", event => {
-
-        const rect =
-            button.getBoundingClientRect();
-
-        const x =
-            event.clientX -
-            rect.left -
-            rect.width / 2;
-
-        const y =
-            event.clientY -
-            rect.top -
-            rect.height / 2;
-
-        button.style.transform =
-            `translate(${x * 0.08}px, ${y * 0.08}px)`;
-
-    });
-
-    button.addEventListener("mouseleave", () => {
-
-        button.style.transform = "";
-
-    });
-
-});
-```
