@@ -183,8 +183,11 @@ const modalBackdrop = document.querySelector(".modal-backdrop");
 
 projects.forEach(function (project) {
 
-    project.addEventListener("click", function () {
+    if (project.dataset.external === "true") {
+        return;
+    }
 
+    project.addEventListener("click", function () {
         const title =
             project.getAttribute("data-title");
 
