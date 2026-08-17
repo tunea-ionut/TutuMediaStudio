@@ -943,16 +943,14 @@ footer {
 /* REVEAL */
 
 .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity .8s ease, transform .8s ease;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .reveal.visible {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 /* ANIMATIONS */
 
