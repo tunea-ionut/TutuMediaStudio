@@ -1124,6 +1124,9 @@ footer {
         gap: 18px;
         text-align: center;
     }
+
+    /* ÎNCHIDE MEDIA QUERY-UL VECHI */
+}
 /* =========================================
    CINEMATIC CONTACT SECTION
 ========================================= */
