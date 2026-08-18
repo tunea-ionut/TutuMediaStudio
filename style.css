@@ -1685,5 +1685,269 @@ footer {
 
 .music-project-card .view-project {
     color: #fff;
+}/* =========================================
+   MY GEAR - NEW SECTION
+========================================= */
+
+.gear-section-new {
+    position: relative;
+    padding: 180px 0 70px;
+    overflow: hidden;
+    border-top: 1px solid #202020;
+    border-bottom: 1px solid #202020;
+}
+
+.gear-bg-text {
+    position: absolute;
+    top: 80px;
+    right: -20px;
+
+    font-size: clamp(150px, 25vw, 400px);
+    line-height: 1;
+
+    font-weight: 900;
+    letter-spacing: -20px;
+
+    color: rgba(255, 255, 255, 0.015);
+
+    pointer-events: none;
+    user-select: none;
+}
+
+.gear-header-new {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 60px;
+
+    margin-bottom: 100px;
+}
+
+.gear-label {
+    color: #555;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.gear-header-new h2 {
+    margin: 18px 0 0;
+
+    font-size: clamp(75px, 11vw, 170px);
+    line-height: .8;
+
+    letter-spacing: -8px;
+    font-weight: 900;
+
+    color: #aaa;
+}
+
+.gear-header-new h2 span {
+    color: var(--accent);
+}
+
+.gear-header-new > p {
+    max-width: 320px;
+
+    margin-bottom: 5px;
+
+    color: #555;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* LIST */
+
+.gear-list-new {
+    position: relative;
+    z-index: 2;
+
+    border-top: 1px solid #282828;
+}
+
+
+/* ITEM */
+
+.gear-item-new {
+    display: grid;
+    grid-template-columns: 100px 1fr 60px;
+    align-items: center;
+
+    min-height: 150px;
+
+    border-bottom: 1px solid #282828;
+
+    transition:
+        padding .4s ease,
+        background .4s ease;
+}
+
+.gear-item-new:hover {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    background: #0b0b0b;
+}
+
+
+/* NUMBER */
+
+.gear-index {
+    color: #444;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    transition: color .3s ease;
+}
+
+.gear-item-new:hover .gear-index {
+    color: var(--accent);
+}
+
+
+/* MAIN */
+
+.gear-main {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.gear-type {
+    width: 140px;
+
+    color: #444;
+
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.gear-main h3 {
+    margin: 0;
+
+    color: #888;
+
+    font-size: clamp(25px, 3vw, 45px);
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+.gear-item-new:hover .gear-main h3 {
+    color: #ddd;
+    transform: translateX(8px);
+}
+
+
+/* ARROW */
+
+.gear-mark {
+    justify-self: end;
+
+    color: #333;
+
+    font-size: 28px;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+.gear-item-new:hover .gear-mark {
+    color: var(--accent);
+    transform: translate(5px, -5px);
+}
+
+
+/* BOTTOM */
+
+.gear-bottom-new {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 35px;
+
+    color: #333;
+
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .gear-section-new {
+        padding: 110px 0 45px;
+    }
+
+    .gear-bg-text {
+        top: 110px;
+        font-size: 150px;
+    }
+
+    .gear-header-new {
+        display: block;
+        margin-bottom: 70px;
+    }
+
+    .gear-header-new h2 {
+        font-size: 80px;
+        letter-spacing: -5px;
+    }
+
+    .gear-header-new > p {
+        margin-top: 35px;
+    }
+
+    .gear-item-new {
+        grid-template-columns: 45px 1fr 35px;
+        min-height: 120px;
+    }
+
+    .gear-main {
+        display: block;
+    }
+
+    .gear-type {
+        display: block;
+        width: auto;
+        margin-bottom: 8px;
+    }
+
+    .gear-main h3 {
+        font-size: 24px;
+        letter-spacing: -1px;
+    }
+
+    .gear-mark {
+        font-size: 22px;
+    }
+
+    .gear-bottom-new {
+        display: block;
+    }
+
+    .gear-bottom-new span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
 }
 }
