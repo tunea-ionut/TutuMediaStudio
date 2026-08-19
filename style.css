@@ -1949,5 +1949,291 @@ footer {
         margin-bottom: 10px;
     }
 
+}/* =========================================
+   MY GEAR
+========================================= */
+
+.gear-section {
+    position: relative;
+    padding: 150px 0 80px;
+    background: #050505;
+    overflow: hidden;
+    border-top: 1px solid #1d1d1d;
+}
+
+
+/* CONTAINER */
+
+.gear-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+
+/* INTRO */
+
+.gear-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.gear-label {
+    display: block;
+    margin-bottom: 20px;
+
+    color: #666;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.gear-intro h2 {
+    margin: 0;
+
+    font-size: clamp(70px, 10vw, 140px);
+    line-height: .8;
+
+    font-weight: 900;
+    letter-spacing: -7px;
+
+    color: #e5e5e5;
+}
+
+.gear-intro h2 span {
+    color: #ffd400;
+}
+
+.gear-intro p {
+    max-width: 330px;
+    margin: 0;
+
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* GRID */
+
+.gear-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+
+    background: #292929;
+
+    border: 1px solid #292929;
+}
+
+
+/* CARD */
+
+.gear-card {
+    position: relative;
+
+    min-height: 220px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: #070707;
+
+    overflow: hidden;
+
+    transition:
+        background .4s ease,
+        transform .4s ease;
+}
+
+.gear-card-wide {
+    grid-column: 1 / -1;
+    min-height: 190px;
+}
+
+
+/* NUMBER */
+
+.gear-number {
+    color: #444;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    transition: color .3s ease;
+}
+
+
+/* CATEGORY */
+
+.gear-category {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #555;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    transition: color .3s ease;
+}
+
+
+/* NAME */
+
+.gear-card h3 {
+    margin: 0;
+
+    color: #888;
+
+    font-size: clamp(24px, 3vw, 40px);
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    transition:
+        color .4s ease,
+        transform .4s ease;
+}
+
+
+/* ARROW */
+
+.gear-arrow {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+
+    color: #333;
+
+    font-size: 26px;
+
+    transition:
+        color .3s ease,
+        transform .4s ease;
+}
+
+
+/* HOVER */
+
+.gear-card:hover {
+    background: #0d0d0d;
+    transform: translateY(-3px);
+}
+
+.gear-card:hover .gear-number {
+    color: #ffd400;
+}
+
+.gear-card:hover .gear-category {
+    color: #888;
+}
+
+.gear-card:hover h3 {
+    color: #f1f1f1;
+    transform: translateX(8px);
+}
+
+.gear-card:hover .gear-arrow {
+    color: #ffd400;
+    transform: translate(5px, -5px);
+}
+
+
+/* YELLOW LINE */
+
+.gear-card::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #ffd400;
+
+    transition: width .5s ease;
+}
+
+.gear-card:hover::after {
+    width: 100%;
+}
+
+
+/* FOOTER */
+
+.gear-footer {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 25px;
+
+    color: #333;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .gear-section {
+        padding: 100px 0 50px;
+    }
+
+    .gear-intro {
+        display: block;
+        margin-bottom: 55px;
+    }
+
+    .gear-intro h2 {
+        font-size: 75px;
+        letter-spacing: -5px;
+    }
+
+    .gear-intro p {
+        margin-top: 35px;
+        max-width: 300px;
+    }
+
+    .gear-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gear-card,
+    .gear-card-wide {
+        grid-column: auto;
+        min-height: 180px;
+        padding: 25px;
+    }
+
+    .gear-card h3 {
+        font-size: 27px;
+    }
+
+    .gear-arrow {
+        right: 25px;
+        top: 25px;
+    }
+
+    .gear-footer {
+        display: block;
+        line-height: 2;
+    }
+
 }
 }
