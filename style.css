@@ -2234,6 +2234,423 @@ footer {
         display: block;
         line-height: 2;
     }
+/* =====================================================
+   NEW MY GEAR SECTION
+===================================================== */
 
+.mygear {
+    position: relative;
+    width: 100%;
+
+    padding: 150px 0 60px;
+
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(255, 212, 0, 0.04),
+            transparent 30%
+        ),
+        #070707;
+
+    border-top: 1px solid #1d1d1d;
+    border-bottom: 1px solid #1d1d1d;
+
+    overflow: hidden;
+}
+
+
+.mygear-wrapper {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+
+.mygear-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 60px;
+
+    margin-bottom: 70px;
+}
+
+
+.mygear-small {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #555;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.mygear-heading h2 {
+    margin: 0;
+
+    color: #d5d5d5;
+
+    font-size: clamp(65px, 9vw, 125px);
+    font-weight: 900;
+
+    line-height: .82;
+    letter-spacing: -7px;
+}
+
+
+.mygear-heading h2 span {
+    color: #ffd400;
+}
+
+
+.mygear-description {
+    max-width: 320px;
+
+    margin: 0 0 5px;
+
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* GRID */
+
+.mygear-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+/* CARD */
+
+.mygear-card {
+    position: relative;
+
+    min-height: 260px;
+
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: #0b0b0b;
+
+    border: 1px solid #202020;
+
+    overflow: hidden;
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        background .35s ease;
+}
+
+
+/* YELLOW GLOW */
+
+.mygear-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    right: -100px;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background: #ffd400;
+
+    filter: blur(80px);
+
+    opacity: 0;
+
+    transition: opacity .4s ease;
+
+    pointer-events: none;
+}
+
+
+/* YELLOW BOTTOM LINE */
+
+.mygear-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #ffd400;
+
+    transition: width .45s ease;
+}
+
+
+.mygear-card:hover {
+    transform: translateY(-5px);
+
+    background: #0e0e0e;
+
+    border-color: #333;
+}
+
+
+.mygear-card:hover::before {
+    opacity: .10;
+}
+
+
+.mygear-card:hover::after {
+    width: 100%;
+}
+
+
+/* TOP */
+
+.mygear-top {
+    display: flex;
+    justify-content: space-between;
+
+    color: #3f3f3f;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    transition: color .3s ease;
+}
+
+
+.mygear-card:hover .mygear-top {
+    color: #777;
+}
+
+
+.mygear-card:hover .mygear-top span:first-child {
+    color: #ffd400;
+}
+
+
+/* CONTENT */
+
+.mygear-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+.mygear-icon {
+    display: block;
+
+    margin-bottom: 17px;
+
+    color: #444;
+
+    font-size: 24px;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.mygear-card:hover .mygear-icon {
+    color: #ffd400;
+
+    transform: translateY(-3px);
+}
+
+
+.mygear-content h3 {
+    margin: 0;
+
+    color: #a5a5a5;
+
+    font-size: clamp(24px, 3vw, 37px);
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.mygear-card:hover .mygear-content h3 {
+    color: #eeeeee;
+
+    transform: translateX(5px);
+}
+
+
+.mygear-content p {
+    margin: 7px 0 0;
+
+    color: #444;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ARROW */
+
+.mygear-arrow {
+    position: absolute;
+
+    right: 28px;
+    bottom: 27px;
+
+    color: #333;
+
+    font-size: 25px;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.mygear-card:hover .mygear-arrow {
+    color: #ffd400;
+
+    transform: translate(5px, -5px);
+}
+
+
+/* GIMBAL CARD */
+
+.mygear-featured {
+    grid-column: 1 / -1;
+
+    min-height: 220px;
+}
+
+
+.mygear-featured .mygear-content h3 {
+    font-size: clamp(30px, 4vw, 50px);
+}
+
+
+/* FOOTER */
+
+.mygear-footer {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+    color: #333;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   TABLET / MOBILE
+===================================================== */
+
+@media (max-width: 750px) {
+
+    .mygear {
+        padding: 100px 0 45px;
+    }
+
+
+    .mygear-header {
+        display: block;
+
+        margin-bottom: 50px;
+    }
+
+
+    .mygear-heading h2 {
+        font-size: 72px;
+
+        letter-spacing: -5px;
+    }
+
+
+    .mygear-description {
+        margin-top: 30px;
+
+        max-width: 300px;
+    }
+
+
+    .mygear-grid {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+
+    .mygear-card,
+    .mygear-featured {
+        grid-column: auto;
+
+        min-height: 190px;
+
+        padding: 23px;
+    }
+
+
+    .mygear-content h3,
+    .mygear-featured .mygear-content h3 {
+        max-width: 80%;
+
+        font-size: 26px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .mygear-icon {
+        font-size: 20px;
+    }
+
+
+    .mygear-arrow {
+        right: 23px;
+        bottom: 23px;
+    }
+
+
+    .mygear-footer {
+        display: flex;
+        flex-direction: column;
+
+        gap: 7px;
+
+        margin-top: 20px;
+    }
+
+}
 }
 }
