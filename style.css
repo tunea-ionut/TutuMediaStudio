@@ -3626,6 +3626,58 @@ footer {
         grid-column: auto;
         min-height: 230px;
     }
+    /* =========================================
+   DESKTOP FIX - GEAR
+========================================= */
+
+@media (min-width: 751px) {
+
+    #gear .gear-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+        width: 100% !important;
+    }
+
+    #gear .gear-card {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+
+        min-height: 280px !important;
+        padding: 30px !important;
+
+        background: #0b0b0b !important;
+        border: 1px solid #222 !important;
+        border-radius: 14px !important;
+
+        width: auto !important;
+        max-width: none !important;
+    }
+
+    #gear .gear-card-wide {
+        grid-column: 1 / -1 !important;
+        min-height: 230px !important;
+    }
+
+    #gear .gear-heading-row {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-end !important;
+        gap: 50px !important;
+    }
+
+    #gear .gear-card-top {
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+
+    #gear .gear-card-bottom {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+}
 }
 }
 }
