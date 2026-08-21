@@ -1717,5 +1717,56 @@ footer {
         width: 85px;
         height: 48px;
     }
+    /* =========================
+   NAVBAR LOGO FIX
+========================= */
+
+.site-logo {
+    display: flex;
+    align-items: center;
+
+    width: 125px;
+    height: 55px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+}
+
+.site-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /* mută imaginea astfel încât să se vadă logo-ul,
+       nu spațiul gol */
+    object-position: center 46%;
+
+    display: block;
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 751px) {
+
+    .site-logo {
+        width: 130px;
+        height: 58px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .site-logo {
+        width: 95px;
+        height: 45px;
+    }
+
 }
     }
