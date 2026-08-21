@@ -1767,6 +1767,26 @@ footer {
         width: 95px;
         height: 45px;
     }
+.site-logo {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 65px;
+    overflow: hidden;
+}
 
+.site-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 750px) {
+    .site-logo {
+        width: 115px;
+        height: 52px;
+    }
+}
 }
     }
