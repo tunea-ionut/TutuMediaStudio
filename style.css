@@ -2650,7 +2650,255 @@ footer {
 
         margin-top: 20px;
     }
+/* =========================================
+   MY GEAR - CLEAN VERSION
+========================================= */
 
+.mygear {
+    padding: 100px 0 120px;
+    background: #050505;
+}
+
+.mygear-wrapper {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+
+.mygear-header {
+    display: block;
+    margin-bottom: 55px;
+}
+
+.mygear-small {
+    display: none;
+}
+
+.mygear-heading h2 {
+    margin: 0;
+
+    font-size: clamp(55px, 6vw, 85px);
+    font-weight: 900;
+
+    line-height: 1;
+    letter-spacing: -4px;
+
+    color: #f1f1f1;
+}
+
+.mygear-heading h2 span {
+    color: #ffd400;
+}
+
+.mygear-description {
+    max-width: 750px;
+
+    margin-top: 50px;
+
+    color: #777;
+
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* LIST */
+
+.mygear-grid {
+    display: block;
+    background: transparent;
+    border: 0;
+}
+
+
+/* EQUIPMENT */
+
+.mygear-card,
+.mygear-featured {
+    position: relative;
+
+    display: block;
+
+    min-height: auto;
+
+    padding: 25px 0 35px;
+
+    background: transparent;
+
+    border: 0;
+    border-bottom: 1px solid #171717;
+
+    transform: none;
+}
+
+
+/* REMOVE OLD EFFECTS */
+
+.mygear-card::before,
+.mygear-card::after {
+    display: none;
+}
+
+
+/* TOP */
+
+.mygear-top {
+    display: flex;
+    justify-content: flex-start;
+    gap: 6px;
+
+    margin-bottom: 10px;
+
+    color: #ddd;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    letter-spacing: 0;
+}
+
+.mygear-top span:first-child {
+    color: #fff;
+}
+
+
+/* CONTENT */
+
+.mygear-content {
+    position: relative;
+}
+
+.mygear-icon {
+    display: block;
+
+    margin: 0 0 22px;
+
+    color: #eee;
+
+    font-size: 15px;
+}
+
+.mygear-content h3,
+.mygear-featured .mygear-content h3 {
+    margin: 0;
+
+    color: #eeeeee;
+
+    font-size: 22px;
+    font-weight: 800;
+
+    letter-spacing: -.5px;
+}
+
+.mygear-content p {
+    margin-top: 22px;
+
+    color: #777;
+
+    font-size: 17px;
+}
+
+
+/* ARROW */
+
+.mygear-arrow {
+    position: static;
+
+    display: block;
+
+    margin-top: 25px;
+
+    color: #ddd;
+
+    font-size: 18px;
+}
+
+
+/* HOVER */
+
+.mygear-card:hover,
+.mygear-featured:hover {
+    background: transparent;
+    transform: none;
+}
+
+.mygear-card:hover .mygear-content h3 {
+    color: #ffd400;
+    transform: none;
+}
+
+.mygear-card:hover .mygear-top span:first-child {
+    color: #ffd400;
+}
+
+.mygear-card:hover .mygear-arrow {
+    color: #ffd400;
+    transform: translate(4px, -4px);
+}
+
+
+/* LAST ITEM */
+
+.mygear-featured {
+    grid-column: auto;
+}
+
+
+/* FOOTER */
+
+.mygear-footer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+
+    margin-top: 15px;
+
+    color: #eee;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    letter-spacing: 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .mygear {
+        padding: 80px 0;
+    }
+
+    .mygear-heading h2 {
+        font-size: 58px;
+    }
+
+    .mygear-description {
+        margin-top: 35px;
+        font-size: 15px;
+    }
+
+    .mygear-top {
+        font-size: 14px;
+    }
+
+    .mygear-content h3,
+    .mygear-featured .mygear-content h3 {
+        font-size: 21px;
+    }
+
+    .mygear-content p {
+        font-size: 15px;
+    }
+
+    .mygear-footer {
+        flex-direction: row;
+        font-size: 12px;
+    }
+}
 }
 }
 }
