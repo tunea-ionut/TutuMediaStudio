@@ -1686,4 +1686,36 @@ footer {
 .music-project-card .view-project {
     color: #fff;
 
+    /* LOGO NAVBAR */
+
+.site-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.site-logo img {
+    display: block;
+    width: 105px;
+    height: 58px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+/* DESKTOP */
+@media (min-width: 751px) {
+    .site-logo img {
+        width: 115px;
+        height: 62px;
+    }
+}
+
+/* TELEFON */
+@media (max-width: 750px) {
+    .site-logo img {
+        width: 85px;
+        height: 48px;
+    }
+}
     }
