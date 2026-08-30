@@ -1686,5 +1686,167 @@ footer {
 .music-project-card .view-project {
     color: #fff;
 
-  
+  /* =========================================
+   PODCAST INSIDE PORTFOLIO
+========================================= */
+
+.portfolio-podcast {
+    margin-top: 80px;
+    padding-top: 60px;
+
+    border-top: 1px solid #242424;
+}
+
+
+/* HEADER */
+
+.portfolio-podcast-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 60px;
+
+    margin-bottom: 40px;
+}
+
+
+.podcast-number {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #555;
+
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+
+.portfolio-podcast-header h3 {
+    margin: 0;
+
+    color: #ddd;
+
+    font-size: clamp(45px, 6vw, 85px);
+    font-weight: 900;
+
+    line-height: .85;
+    letter-spacing: -4px;
+}
+
+
+.portfolio-podcast-header h3 span {
+    color: #ffd400;
+}
+
+
+.portfolio-podcast-header p {
+    max-width: 300px;
+
+    margin: 0 0 5px;
+
+    color: #666;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* PLAYER */
+
+.portfolio-podcast-player {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #000;
+
+    border: 1px solid #242424;
+    border-radius: 12px;
+}
+
+
+.portfolio-podcast-player iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* BOTTOM */
+
+.portfolio-podcast-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 20px;
+
+    color: #444;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+.portfolio-podcast-footer a {
+    color: #777;
+
+    text-decoration: none;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.portfolio-podcast-footer a:hover {
+    color: #ffd400;
+
+    transform: translateX(5px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .portfolio-podcast {
+        margin-top: 55px;
+        padding-top: 45px;
+    }
+
+    .portfolio-podcast-header {
+        display: block;
+    }
+
+    .portfolio-podcast-header h3 {
+        font-size: 50px;
+        letter-spacing: -3px;
+    }
+
+    .portfolio-podcast-header p {
+        margin-top: 25px;
+    }
+
+    .portfolio-podcast-player {
+        border-radius: 7px;
+    }
+
+    .portfolio-podcast-footer {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+}
     }
