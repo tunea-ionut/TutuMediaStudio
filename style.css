@@ -1981,5 +1981,18 @@ footer {
 
     border-bottom: 1px solid rgba(255, 212, 0, .15);
 }
+    .reveal {
+    opacity: 0;
+    transform: translateY(45px);
+
+    transition:
+        opacity .8s cubic-bezier(.2,.8,.2,1),
+        transform .8s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 }
     }
