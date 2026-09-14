@@ -1967,5 +1967,19 @@ footer {
 .project-card:hover::after {
     width: 100%;
 }
+    .navbar {
+    transition:
+        background .35s ease,
+        border-color .35s ease,
+        backdrop-filter .35s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(5, 5, 5, .82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid rgba(255, 212, 0, .15);
+}
 }
     }
