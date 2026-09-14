@@ -1994,5 +1994,21 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+    h1 span,
+h2 span {
+    display: inline-block;
+
+    transition:
+        transform .35s ease,
+        text-shadow .35s ease;
+}
+
+h1:hover span,
+h2:hover span {
+    transform: translateX(6px);
+
+    text-shadow:
+        0 0 25px rgba(255, 212, 0, .25);
+}
 }
     }
