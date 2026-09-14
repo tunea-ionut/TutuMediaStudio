@@ -1949,5 +1949,23 @@ footer {
     transform: translate(5px, -5px);
     color: #ffd400;
 }
+    .project-card::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #ffd400;
+
+    transition: width .45s cubic-bezier(.2,.8,.2,1);
+}
+
+.project-card:hover::after {
+    width: 100%;
+}
 }
     }
